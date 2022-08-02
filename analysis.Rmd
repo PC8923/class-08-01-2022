@@ -1,0 +1,26 @@
+---
+title: "Social Capital"
+author: "Jihan Bhuiyan"
+date: "2022-08-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, warning=FALSE}
+ec = read_rds("ec.rds")
+```
+
+```{r, warning=FALSE}
+summary(ec)
+```
+
+```{r, warning=FALSE}
+ec |>
+  ggplot(aes(x = pop2018)) + 
+    geom_histogram(bins = 50)
+```
+
